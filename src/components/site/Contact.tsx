@@ -79,7 +79,7 @@ export function Contact() {
             >
               <div className="grid gap-5 sm:grid-cols-2">
                 {fields.map((f) => (
-                  <div key={f.name} className={f.name === "message" ? "sm:col-span-2" : ""}>
+                  <div key={f.name}>
                     <label htmlFor={f.name} className="mb-2 block text-sm font-semibold text-ink">
                       {f.label}
                       {f.required ? <span className="text-brand"> *</span> : null}
@@ -108,11 +108,11 @@ export function Contact() {
                     rows={5}
                     maxLength={1000}
                     placeholder="What kind of business do you run, and what would you like your website to do?"
-                    aria-invalid={!!errors.message}
+                    aria-invalid={!!errors["message"]}
                     className="w-full resize-none rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition-all placeholder:text-muted-foreground/70 focus:border-brand focus:ring-4 focus:ring-primary/15 aria-[invalid=true]:border-destructive"
                   />
-                  {errors.message ? (
-                    <p className="mt-1.5 text-xs text-destructive">{errors.message}</p>
+                  {errors["message"] ? (
+                    <p className="mt-1.5 text-xs text-destructive">{errors["message"]}</p>
                   ) : null}
                 </div>
               </div>
