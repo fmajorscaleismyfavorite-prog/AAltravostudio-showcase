@@ -1,140 +1,138 @@
-import { useCallback, useEffect, useState } from "react";
-import useEmblaCarousel from "embla-carousel-react";
 import { motion } from "motion/react";
-import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import {
+  Smartphone,
+  Search,
+  Zap,
+  MessageCircle,
+  ArrowUpRight,
+} from "lucide-react";
 import { SectionHeading } from "./Reveal";
-import a1 from "@/assets/avatar-1.jpg";
-import a2 from "@/assets/avatar-2.jpg";
-import a3 from "@/assets/avatar-3.jpg";
-import a4 from "@/assets/avatar-4.jpg";
 
-const testimonials = [
+const benefits = [
   {
-    name: "Maria Santos",
-    role: "Owner, Bella Cucina",
-    avatar: a1,
-    quote:
-      "We used to lose bookings in our Facebook messages. Now people find our menu, see our hours, and reserve a table before they even call. Our weekends fill up on their own.",
+    icon: Smartphone,
+    title: "Mobile-First Experience",
+    description:
+      "Your website is designed to look and work beautifully on phones, tablets, and desktops.",
   },
   {
-    name: "Daniel Cruz",
-    role: "Founder, FadeHouse Barbers",
-    avatar: a2,
-    quote:
-      "The team understood barbering, not just websites. The booking page pays for itself every month, and clients keep telling us the site looks better than the big chains.",
+    icon: Search,
+    title: "SEO-Ready Structure",
+    description:
+      "Built with a clean structure that gives search engines a better understanding of your business.",
   },
   {
-    name: "Dr. Elena Reyes",
-    role: "Northgate Dental",
-    avatar: a3,
-    quote:
-      "Patients say the site made them feel comfortable choosing us. Appointment requests come in overnight, and our front desk finally has fewer repetitive phone calls.",
+    icon: Zap,
+    title: "Fast & Modern",
+    description:
+      "Lightweight, polished pages designed to load quickly and keep visitors from leaving.",
   },
   {
-    name: "Marcus Hale",
-    role: "Broker, Sierra Realty",
-    avatar: a4,
-    quote:
-      "Fast, professional, and genuinely easy to work with. Listings load instantly on mobile and enquiries land with the right agent automatically. Exactly what we asked for.",
+    icon: MessageCircle,
+    title: "Built to Generate Inquiries",
+    description:
+      "Clear calls-to-action make it easy for visitors to contact, book, call, or message your business.",
   },
 ];
 
 export function Testimonials() {
-  const [emblaRef, embla] = useEmblaCarousel({ loop: true, align: "start" });
-  const [selected, setSelected] = useState(0);
-
-  const onSelect = useCallback(() => {
-    if (embla) setSelected(embla.selectedScrollSnap());
-  }, [embla]);
-
-  useEffect(() => {
-    if (!embla) return;
-    onSelect();
-    embla.on("select", onSelect);
-    return () => {
-      embla.off("select", onSelect);
-    };
-  }, [embla, onSelect]);
-
   return (
-    <section id="testimonials" className="section-pad bg-mist">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section id="what-you-can-expect">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
-          eyebrow="Testimonials"
-          title={<>Business owners who stopped losing customers online</>}
-          description="Real outcomes from the kind of local businesses we love working with."
+          eyebrow="What You Can Expect"
+          title={
+            <>
+              More than a website.
+              <br />
+              <span className="text-gradient">A better way to grow online.</span>
+            </>
+          }
+          description="Every AltravoStudio website is built around your business, your customers, and the actions you want visitors to take."
         />
 
-        <div className="mt-14">
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex gap-6">
-              {testimonials.map((t) => (
-                <motion.figure
-                  key={t.name}
-                  whileHover={{ y: -8 }}
-                  transition={{ type: "spring", stiffness: 240, damping: 20 }}
-                  className="relative w-[88%] shrink-0 rounded-3xl border border-border bg-background p-8 shadow-soft sm:w-[48%] lg:w-[calc(33.333%-1rem)]"
-                >
-                  <Quote className="size-8 text-accent/40" />
-                  <div className="mt-4 flex gap-1" aria-label="5 out of 5 stars">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} className="size-4 fill-accent text-accent" />
-                    ))}
-                  </div>
-                  <blockquote className="mt-4 text-sm leading-relaxed text-foreground">
-                    “{t.quote}”
-                  </blockquote>
-                  <figcaption className="mt-6 flex items-center gap-3 border-t border-border pt-5">
-                    <img
-                      src={t.avatar}
-                      alt={t.name}
-                      loading="lazy"
-                      width={512}
-                      height={512}
-                      className="size-11 rounded-full object-cover"
-                    />
-                    <span>
-                      <span className="block text-sm font-bold text-ink">{t.name}</span>
-                      <span className="block text-xs text-muted-foreground">{t.role}</span>
-                    </span>
-                  </figcaption>
-                </motion.figure>
-              ))}
-            </div>
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {benefits.map((benefit, index) => {
+            const Icon = benefit.icon;
+
+            return (
+              <motion.article
+                key={benefit.title}
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                  duration: 0.55,
+                  delay: index * 0.1,
+                  ease: "easeOut",
+                }}
+                whileHover={{
+                  y: -8,
+                  transition: {
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20,
+                  },
+                }}
+                className="group relative overflow-hidden rounded-3xl border border-border bg-background p-7 shadow-soft transition-shadow hover:shadow-lift"
+              >
+                {/* Decorative glow */}
+                <div className="pointer-events-none absolute -right-10 -top-10 size-32 rounded-full bg-brand/10 blur-3xl transition-all duration-500 group-hover:bg-brand/20" />
+
+                {/* Icon */}
+                <div className="relative flex size-12 items-center justify-center rounded-2xl bg-gradient-brand text-brand-foreground shadow-soft transition-transform duration-300 group-hover:scale-110">
+                  <Icon className="size-5" />
+                </div>
+
+                {/* Content */}
+                <div className="relative">
+                  <h3 className="mt-6 text-lg font-bold text-ink">
+                    {benefit.title}
+                  </h3>
+
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    {benefit.description}
+                  </p>
+                </div>
+
+                {/* Bottom accent */}
+                <a
+                   href="#services"
+                   className="mt-7 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.12em] text-brand opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100"
+                 >
+                  Built for your business
+                   <ArrowUpRight className="size-3.5" />
+                 </a>
+              </motion.article>
+            );
+          })}
+        </div>
+
+        {/* Bottom CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.25 }}
+          className="mt-10 flex flex-col items-center justify-between gap-5 rounded-3xl border border-border bg-mist p-7 sm:flex-row sm:p-8"
+        >
+          <div>
+            <p className="text-lg font-bold text-ink">
+              Ready to build your online presence?
+            </p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Let's create a website that works for your business.
+            </p>
           </div>
 
-          <div className="mt-8 flex items-center justify-center gap-3">
-            <button
-              type="button"
-              aria-label="Previous testimonial"
-              onClick={() => embla?.scrollPrev()}
-              className="flex size-11 items-center justify-center rounded-full border border-border bg-background text-ink transition-colors hover:border-brand/50 hover:text-brand"
-            >
-              <ChevronLeft className="size-5" />
-            </button>
-            <div className="flex gap-2">
-              {testimonials.map((t, i) => (
-                <button
-                  key={t.name}
-                  type="button"
-                  aria-label={`Go to testimonial ${i + 1}`}
-                  onClick={() => embla?.scrollTo(i)}
-                  className={`h-2 rounded-full transition-all ${
-                    selected === i ? "w-7 bg-gradient-brand" : "w-2 bg-border"
-                  }`}
-                />
-              ))}
-            </div>
-            <button
-              type="button"
-              aria-label="Next testimonial"
-              onClick={() => embla?.scrollNext()}
-              className="flex size-11 items-center justify-center rounded-full border border-border bg-background text-ink transition-colors hover:border-brand/50 hover:text-brand"
-            >
-              <ChevronRight className="size-5" />
-            </button>
-          </div>
-        </div>
+          <a
+            href="#contact"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 text-sm font-semibold text-brand-foreground shadow-lift transition-transform hover:scale-105"
+          >
+            Get Free Consultation
+            <ArrowUpRight className="size-4" />
+          </a>
+        </motion.div>
       </div>
     </section>
   );

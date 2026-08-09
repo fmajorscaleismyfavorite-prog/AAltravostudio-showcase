@@ -84,7 +84,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-muted-foreground"
           >
-            <span className="flex items-center gap-2"><span className="size-1.5 rounded-full bg-brand" />Launch in 7–14 days</span>
+            <span className="flex items-center gap-2"><span className="size-1.5 rounded-full bg-brand" />7–14 Day Typical Launch</span>
             <span className="flex items-center gap-2"><span className="size-1.5 rounded-full bg-brand" />Mobile-first &amp; SEO-ready</span>
             <span className="flex items-center gap-2"><span className="size-1.5 rounded-full bg-brand" />Free consultation</span>
           </motion.div>

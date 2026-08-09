@@ -2,15 +2,20 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import { ArrowUpRight, Check } from "lucide-react";
 import {
-  Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription,
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
 } from "@/components/ui/dialog";
 import { Reveal, SectionHeading } from "./Reveal";
-import restaurant from "@/assets/work-restaurant.jpg";
-import barbershop from "@/assets/work-barbershop.jpg";
-import clinic from "@/assets/work-clinic.jpg";
-import realestate from "@/assets/work-realestate.jpg";
-import gym from "@/assets/work-gym.jpg";
-import resort from "@/assets/work-resort.jpg";
+
+import fadecraftPremium from "@/assets/portfolio/fadecraft-premium.jpg";
+import freshbite from "@/assets/portfolio/freshbite.jpg";
+import fadecraftClassic from "@/assets/portfolio/fadecraft-classic.jpg";
+import glowBeauty from "@/assets/portfolio/glow-beauty.jpg";
+import brickBloom from "@/assets/portfolio/brick-bloom.jpg";
+import brightSmiles from "@/assets/portfolio/bright-smiles.jpg";
 
 type Project = {
   title: string;
@@ -23,58 +28,93 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Bella Cucina",
-    category: "Restaurant",
-    image: restaurant,
-    description: "A warm, photo-led site with a digital menu and one-tap reservations.",
-    detail:
-      "Bella Cucina was taking every booking through direct messages. We built a menu-first website with live opening hours, a reservation form that lands straight in the owner's inbox, and directions built into every page.",
-    results: ["Reservations handled online instead of DMs", "Menu updates in under a minute", "Ranked for “Italian restaurant near me”"],
-  },
-  {
-    title: "FadeHouse Barbers",
+    title: "FadeCraft Premium",
     category: "Barbershop",
-    image: barbershop,
-    description: "Bold, dark styling with a booking flow built for repeat clients.",
+    image: fadecraftPremium,
+    description:
+      "A premium barbershop website built around bookings, strong branding, and a high-end customer experience.",
     detail:
-      "A confident brand-led design with a barber-by-barber gallery, transparent pricing, and a booking button that follows the visitor down the page on mobile.",
-    results: ["Bookings available 24/7", "Clear pricing reduced phone questions", "Instagram gallery synced into the site"],
+      "FadeCraft Premium combines a bold visual identity with a clear booking-focused experience. The design highlights the barbershop's services, atmosphere, credibility, and calls to action while keeping the experience easy to navigate.",
+    results: [
+      "Premium brand-focused visual design",
+      "Booking-focused customer journey",
+      "Clear services and pricing presentation",
+    ],
   },
+
   {
-    title: "Northgate Dental",
+    title: "FreshBite",
+    category: "Restaurant",
+    image: freshbite,
+    description:
+      "A warm, modern restaurant website designed to showcase food and make reservations feel effortless.",
+    detail:
+      "FreshBite uses a warm editorial-style layout that puts the food and restaurant experience first. Strong photography, simple navigation, and clear reservation actions help visitors quickly understand what the restaurant offers.",
+    results: [
+      "Food-first visual presentation",
+      "Clear menu and reservation calls to action",
+      "Warm branding designed for local customers",
+    ],
+  },
+
+  {
+    title: "FadeCraft Classic",
+    category: "Barbershop",
+    image: fadecraftClassic,
+    description:
+      "A dark, cinematic barbershop website with a confident identity and appointment-focused layout.",
+    detail:
+      "FadeCraft Classic uses a darker visual direction to create a premium and masculine atmosphere. The homepage immediately communicates the brand, services, location, and booking action.",
+    results: [
+      "Strong visual brand identity",
+      "Clear appointment call to action",
+      "Designed for a premium barbershop experience",
+    ],
+  },
+
+  {
+    title: "Glow Beauty",
+    category: "Beauty Salon",
+    image: glowBeauty,
+    description:
+      "A clean and elegant beauty website showcasing salon services, treatments, and appointment options.",
+    detail:
+      "Glow Beauty focuses on a softer, more elegant visual experience. Service cards make the different treatments easy to explore while the appointment button remains highly visible throughout the experience.",
+    results: [
+      "Elegant service-focused design",
+      "Easy-to-browse treatment sections",
+      "Prominent appointment actions",
+    ],
+  },
+
+  {
+    title: "Brick & Bloom",
+    category: "Café",
+    image: brickBloom,
+    description:
+      "A cozy café website built around atmosphere, storytelling, menu discovery, and table reservations.",
+    detail:
+      "Brick & Bloom uses rich photography and warm typography to communicate the personality of the café. The design makes the experience feel inviting while keeping the menu and reservation actions easy to find.",
+    results: [
+      "Atmosphere-driven visual design",
+      "Menu-focused customer journey",
+      "Clear table reservation action",
+    ],
+  },
+
+  {
+    title: "Bright Smiles",
     category: "Dental Clinic",
-    image: clinic,
-    description: "Calm, accessible design that makes booking care feel simple.",
+    image: brightSmiles,
+    description:
+      "A modern dental clinic website designed to create trust while making appointments simple.",
     detail:
-      "Healthcare needs reassurance. We used soft colours, plain-language service pages, staff credentials, and an appointment request form with insurance details built in.",
-    results: ["Appointment requests up week over week", "AA-level accessible contrast", "Service pages built for local search"],
-  },
-  {
-    title: "Sierra Realty",
-    category: "Real Estate",
-    image: realestate,
-    description: "A premium listing experience with filters and agent enquiry forms.",
-    detail:
-      "Buyers browse on their phones. We built a fast listing grid with saved filters, high-resolution galleries, and enquiry forms routed to the right agent automatically.",
-    results: ["Listings load in under a second", "Enquiries routed per agent", "Shareable listing links for social"],
-  },
-  {
-    title: "Ironwood Gym",
-    category: "Fitness",
-    image: gym,
-    description: "High-energy design with class schedules and trial sign-ups.",
-    detail:
-      "The goal was free-trial sign-ups. We paired a bold hero with a live class timetable, membership comparison, and a short form that takes fifteen seconds to complete.",
-    results: ["Free-trial form on every screen", "Timetable editable by staff", "Membership tiers made easy to compare"],
-  },
-  {
-    title: "Azure Bay Resort",
-    category: "Hotel & Resort",
-    image: resort,
-    description: "An elegant escape with a booking widget and room storytelling.",
-    detail:
-      "Resorts sell a feeling. Full-bleed photography, room-by-room storytelling, and a date-picker enquiry widget give guests everything they need to commit.",
-    results: ["Direct enquiries instead of OTA-only", "Room pages built for sharing", "Multi-language ready structure"],
+      "Bright Smiles uses a clean and reassuring visual style to make the clinic feel professional and approachable. Important information such as services, experience, patient trust signals, and appointment actions are presented clearly.",
+    results: [
+      "Trust-focused healthcare design",
+      "Clear appointment call to action",
+      "Clean and approachable visual experience",
+    ],
   },
 ];
 
@@ -82,12 +122,12 @@ export function Portfolio() {
   const [active, setActive] = useState<Project | null>(null);
 
   return (
-    <section id="portfolio" className="section-pad relative overflow-hidden bg-mist">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section id="portfolio" className="py-24">
+      <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
           eyebrow="Portfolio"
-          title={<>Designs built for real businesses like yours</>}
-          description="A look at the kind of websites we design — every layout is crafted around how that industry actually wins customers."
+          title={<>Websites designed to make businesses stand out.</>}
+          description="A selection of website concepts and demo projects designed by AltravoStudio."
         />
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -95,25 +135,55 @@ export function Portfolio() {
             <Reveal key={p.title} delay={(i % 3) * 0.06}>
               <motion.article
                 whileHover={{ y: -10 }}
-                transition={{ type: "spring", stiffness: 240, damping: 20 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 240,
+                  damping: 20,
+                }}
                 className="group h-full overflow-hidden rounded-3xl border border-border bg-background shadow-soft transition-shadow hover:shadow-lift"
               >
-                <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-                  <img
-                    src={p.image}
-                    alt={`${p.title} ${p.category.toLowerCase()} website design`}
-                    loading="lazy"
-                    width={1024}
-                    height={768}
-                    className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <span className="absolute left-4 top-4 rounded-full px-3 py-1.5 text-xs font-semibold text-ink glass">
+                {/* LAPTOP MOCKUP */}
+                <div className="relative overflow-hidden bg-gradient-to-br from-slate-100 via-slate-200 to-slate-300 px-5 pt-7">
+                  {/* Laptop screen */}
+                  <div className="relative mx-auto max-w-[92%] overflow-hidden rounded-t-xl border-[6px] border-slate-800 bg-slate-900 shadow-2xl">
+                    {/* Camera */}
+                    <div className="absolute left-1/2 top-0 z-10 h-1.5 w-10 -translate-x-1/2 rounded-b-full bg-slate-900" />
+
+                    <div className="aspect-[16/10] overflow-hidden bg-white">
+                      <img
+  src={p.image}
+  alt={`${p.title} ${p.category} website design`}
+  loading="lazy"
+  suppressHydrationWarning
+  className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+/>
+                    </div>
+                  </div>
+
+                  {/* Laptop base */}
+                  <div className="relative mx-auto h-5 w-[98%] rounded-b-2xl bg-gradient-to-b from-slate-400 to-slate-500 shadow-lg">
+                    <div className="absolute left-1/2 top-1 h-1.5 w-24 -translate-x-1/2 rounded-full bg-slate-300/80" />
+                  </div>
+
+                  {/* Desk shadow */}
+                  <div className="mx-auto h-5 w-4/5 rounded-full bg-slate-400/30 blur-md" />
+
+                  {/* Category */}
+                  <span className="absolute left-8 top-5 rounded-full border border-white/70 bg-white/90 px-3 py-1.5 text-xs font-semibold text-ink shadow-sm backdrop-blur">
                     {p.category}
                   </span>
                 </div>
+
+                {/* PROJECT INFO */}
                 <div className="p-6">
-                  <h3 className="text-lg font-bold text-ink">{p.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.description}</p>
+                  <h3 className="text-lg font-bold text-ink">
+                    {p.title}
+                  </h3>
+
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {p.description}
+                  </p>
+
                   <button
                     type="button"
                     onClick={() => setActive(p)}
@@ -129,38 +199,54 @@ export function Portfolio() {
         </div>
       </div>
 
-      <Dialog open={!!active} onOpenChange={(o) => !o && setActive(null)}>
-        <DialogContent className="max-h-[90vh] gap-0 overflow-y-auto rounded-3xl p-0 sm:max-w-3xl">
+      {/* PROJECT MODAL */}
+      <Dialog
+        open={!!active}
+        onOpenChange={(open) => !open && setActive(null)}
+      >
+        <DialogContent className="max-h-[90vh] gap-0 overflow-y-auto rounded-3xl p-0 sm:max-w-4xl">
           {active ? (
             <>
+              {/* Large Preview */}
               <img
-                src={active.image}
-                alt={`${active.title} website design preview`}
-                loading="lazy"
-                width={1024}
-                height={768}
-                className="aspect-[16/10] w-full object-cover"
-              />
+  src={active.image}
+  alt={`${active.title} website preview`}
+  loading="lazy"
+  suppressHydrationWarning
+  className="h-auto w-full object-cover object-top"
+/>
+
+              {/* Project Details */}
               <div className="p-7">
                 <DialogHeader className="text-left">
                   <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
                     {active.category}
                   </span>
-                  <DialogTitle className="text-2xl font-extrabold text-ink">{active.title}</DialogTitle>
+
+                  <DialogTitle className="text-2xl font-extrabold text-ink">
+                    {active.title}
+                  </DialogTitle>
+
                   <DialogDescription className="text-base leading-relaxed">
                     {active.detail}
                   </DialogDescription>
                 </DialogHeader>
+
                 <ul className="mt-6 grid gap-3">
-                  {active.results.map((r) => (
-                    <li key={r} className="flex items-start gap-3 text-sm text-ink">
+                  {active.results.map((result) => (
+                    <li
+                      key={result}
+                      className="flex items-start gap-3 text-sm text-ink"
+                    >
                       <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-gradient-brand text-brand-foreground">
                         <Check className="size-3" />
                       </span>
-                      {r}
+
+                      {result}
                     </li>
                   ))}
                 </ul>
+
                 <a
                   href="#contact"
                   onClick={() => setActive(null)}

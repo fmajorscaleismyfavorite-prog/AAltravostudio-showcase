@@ -21,13 +21,13 @@ const fields = [
   { name: "name", label: "Name", type: "text", placeholder: "Juan Dela Cruz", required: true },
   { name: "business", label: "Business Name", type: "text", placeholder: "Sunrise Café", required: false },
   { name: "email", label: "Email", type: "email", placeholder: "you@business.com", required: true },
-  { name: "phone", label: "Phone", type: "tel", placeholder: "+63 900 000 0000", required: false },
+  { name: "phone", label: "Phone", type: "tel", placeholder: "+63 992 058 6534", required: false },
 ] as const;
 
 const details = [
-  { icon: Mail, label: "Email", value: "hello@altravostudio.com", href: "mailto:hello@altravostudio.com" },
-  { icon: Phone, label: "Phone", value: "+63 900 000 0000", href: "tel:+639000000000" },
-  { icon: MapPin, label: "Location", value: "Metro Manila, Philippines — serving clients worldwide", href: undefined },
+  { icon: Mail, label: "Email", value: "altravostudio@gmail.com", href: "mailto:altravostudio@gmail.com" },
+  { icon: Phone, label: "Phone", value: "+63 992 058 6534", href: "tel:+63992 058 6534" },
+  { icon: MapPin, label: "Location", value: "Dasmariñas Cavite, Philippines — serving clients worldwide", href: undefined },
 ];
 
 export function Contact() {
@@ -157,12 +157,14 @@ export function Contact() {
                 </ul>
                 <div className="mt-6 flex gap-3">
                   <a
-                    href="https://facebook.com"
-                    aria-label="AltravoStudio on Facebook"
-                    className="flex size-10 items-center justify-center rounded-xl border border-border bg-background text-ink transition-all hover:-translate-y-1 hover:text-brand"
-                  >
-                    <Facebook className="size-4" />
-                  </a>
+  href="https://www.facebook.com/profile.php?id=61592841487454"
+  aria-label="AltravoStudio on Facebook"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex size-10 items-center justify-center rounded-xl border border-border bg-background text-ink transition-all hover:-translate-y-1 hover:text-brand"
+>
+  <Facebook className="size-4" />
+</a>
                   <a
                     href="https://instagram.com"
                     aria-label="AltravoStudio on Instagram"
@@ -172,22 +174,22 @@ export function Contact() {
                   </a>
                 </div>
               </div>
-
-              <div className="relative flex-1 overflow-hidden rounded-3xl border border-border bg-gradient-ink p-7 text-white/80 shadow-soft">
-                <div aria-hidden className="absolute inset-0 opacity-30 [background-image:linear-gradient(oklch(1_0_0_/_0.12)_1px,transparent_1px),linear-gradient(90deg,oklch(1_0_0_/_0.12)_1px,transparent_1px)] [background-size:36px_36px]" />
-                <div className="relative flex h-full min-h-44 flex-col justify-end">
-                  <MapPin className="size-6 text-accent" />
-                  <p className="mt-3 text-sm font-semibold text-white">Find us on the map</p>
-                  <p className="mt-1 text-xs text-white/60">
-                    Metro Manila, Philippines · Remote-friendly, working with local businesses in
-                    every time zone.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Reveal>
+<div className="overflow-hidden rounded-3xl border border-border shadow-soft">
+  <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123714.82561776626!2d120.88593306544223!3d14.306302012242842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d5b87c111e25%3A0xab8cb698f840321f!2sDasmari%C3%B1as%2C%20Cavite!5e0!3m2!1sen!2sph!4v1786095180687!5m2!1sen!2sph"
+  width="100%"
+  height="350"
+  style={{ border: 0 }}
+  loading="lazy"
+  referrerPolicy="strict-origin-when-cross-origin"
+  allowFullScreen
+  title="AltravoStudio Location"
+/>
+          </div>
         </div>
-      </div>
-    </section>
-  );
+      </Reveal>
+    </div>
+  </div>
+</section>
+);
 }

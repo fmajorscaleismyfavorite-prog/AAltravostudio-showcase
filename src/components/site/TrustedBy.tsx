@@ -1,36 +1,48 @@
-const brands = [
-  "Sunrise Café",
-  "Bella Cucina",
-  "Northgate Dental",
-  "FadeHouse Barbers",
-  "Sierra Realty",
-  "Ironwood Gym",
-  "Azure Bay Resort",
-  "QuickFix Auto",
-  "Bloom Salon",
-  "Harbor Construction",
+const industries = [
+  "Restaurants",
+  "Barbershops",
+  "Beauty & Wellness",
+  "Cafés",
+  "Dental Clinics",
+  "Real Estate",
+  "Fitness",
+  "Local Services",
 ];
 
 export function TrustedBy() {
   return (
-    <section aria-label="Businesses we work with" className="border-y border-border bg-background py-10">
-      <p className="mb-7 text-center text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">
-        Trusted by local businesses across every industry
-      </p>
-      <div className="group relative overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_12%,black_88%,transparent)]">
-        <div className="flex w-max animate-marquee gap-4 group-hover:[animation-play-state:paused]">
-          {[...brands, ...brands].map((b, i) => (
+    <section className="overflow-hidden py-10">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+            Industries We Serve
+          </p>
+
+          <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
+            Websites designed for businesses like yours
+          </h2>
+
+          <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+            We create modern online experiences for local businesses across
+            different industries — helping them look professional, get found
+            online, and turn visitors into customers.
+          </p>
+        </div>
+
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          {industries.map((industry) => (
             <span
-              key={`${b}-${i}`}
-              className="flex items-center gap-3 rounded-2xl border border-border bg-mist px-6 py-3.5 text-sm font-semibold text-ink/80 transition-colors hover:border-brand/40 hover:text-brand"
+              key={industry}
+              className="rounded-2xl border border-border bg-mist px-5 py-3 text-sm font-semibold text-ink/80 transition-all hover:-translate-y-1 hover:border-brand/40 hover:text-brand"
             >
-              <span className="flex size-7 items-center justify-center rounded-lg bg-gradient-brand text-[11px] font-bold text-brand-foreground">
-                {b.slice(0, 1)}
-              </span>
-              {b}
+              {industry}
             </span>
           ))}
         </div>
+
+        <p className="mt-6 text-center text-xs text-muted-foreground">
+          Sample projects created by AltravoStudio
+        </p>
       </div>
     </section>
   );
