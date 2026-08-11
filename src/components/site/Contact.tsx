@@ -179,7 +179,7 @@ export function Contact() {
                 </ul>
                 <div className="mt-6 flex gap-3">
                   <a
-  href="https://www.facebook.com/profile.php?id=61592841487454"
+  href={"https://" + "www.facebook.com/profile.php?id=61592841487454"}
   aria-label="AltravoStudio on Facebook"
   target="_blank"
   rel="noopener noreferrer"
@@ -187,9 +187,8 @@ export function Contact() {
 >
   <Facebook className="size-4" />
 </a>
-
-<a
-  href="https://instagram.com"
+                  <a
+  href={"https://" + "instagram.com"}
   aria-label="AltravoStudio on Instagram"
   target="_blank"
   rel="noopener noreferrer"
