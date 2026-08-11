@@ -5,7 +5,7 @@ export default defineConfig({
     base: "/",
   },
 
-  nitro: false,
+  nitro: true,
 
   tanstackStart: {
     spa: {
@@ -14,10 +14,10 @@ export default defineConfig({
         crawlLinks: false,
         retryCount: 2,
       },
+    },
 
-      server: {
-        entry: "server",
-      },
+    server: {
+      entry: "server",
     },
   },
 });
