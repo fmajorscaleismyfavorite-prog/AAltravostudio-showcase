@@ -179,14 +179,14 @@ export function Contact() {
                 </ul>
                 <div className="mt-6 flex gap-3">
                   <a
-                    href="https://www.facebook.com/profile.php?id=61592841487454"
-                    aria-label="AltravoStudio on Facebook"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex size-10 items-center justify-center rounded-xl border border-border bg-background text-ink transition-all hover:-translate-y-1 hover:text-brand"
-                  >
-                    <Facebook className="size-4" />
-                  </a>
+  href="https://www.facebook.com/profile.php?id=61592841487454"
+  aria-label="AltravoStudio on Facebook"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="relative z-50 flex size-10 cursor-pointer items-center justify-center rounded-xl border border-border bg-background text-ink transition-all hover:-translate-y-1 hover:text-brand"
+>
+  <Facebook className="size-4 pointer-events-none" />
+</a>
                   <a
                     href="https://instagram.com"
                     aria-label="AltravoStudio on Instagram"
