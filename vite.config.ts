@@ -1,13 +1,23 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
-  tanstackStart: {
-    server: {
-      entry: "server",
-    },
+  vite: {
+    base: "/",
   },
 
-  vite: {
-    base: "/AAltravostudio-showcase/",
+  nitro: false,
+
+  tanstackStart: {
+    spa: {
+      prerender: {
+        outputPath: "/index.html",
+        crawlLinks: false,
+        retryCount: 2,
+      },
+
+      server: {
+        entry: "server",
+      },
+    },
   },
 });
