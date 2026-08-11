@@ -23,7 +23,7 @@ const fields = [
     name: "business",
     label: "Business Name",
     type: "text",
-    placeholder: "Sunrise Café",
+    placeholder: "Sunrise CafÃ©",
     required: false,
   },
   { name: "email", label: "Email", type: "email", placeholder: "you@business.com", required: true },
@@ -41,7 +41,7 @@ const details = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Dasmariñas Cavite, Philippines — serving clients worldwide",
+    value: "DasmariÃ±as Cavite, Philippines â€” serving clients worldwide",
     href: undefined,
   },
 ];
@@ -86,7 +86,7 @@ export function Contact() {
         <SectionHeading
           eyebrow="Contact"
           title={<>Tell us about your business</>}
-          description="Share a few details and we'll come back with honest advice, a timeline, and a fixed quote — free of charge."
+          description="Share a few details and we'll come back with honest advice, a timeline, and a fixed quote â€” free of charge."
         />
 
         <div className="mt-14 grid gap-6 lg:grid-cols-[1.15fr_1fr]">
@@ -143,7 +143,7 @@ export function Contact() {
                 whileTap={{ scale: 0.98 }}
                 className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-brand px-8 py-4 text-sm font-bold text-brand-foreground shadow-lift disabled:opacity-70 sm:w-auto"
               >
-                {sending ? "Sending…" : "Get My Free Consultation"}
+                {sending ? "Sendingâ€¦" : "Get My Free Consultation"}
                 <Send className="size-4" />
               </motion.button>
             </form>
@@ -178,25 +178,26 @@ export function Contact() {
                   ))}
                 </ul>
                 <div className="mt-6 flex gap-3">
-                  <a
-  href={"https://" + "www.facebook.com/profile.php?id=61592841487454"}
-  aria-label="AltravoStudio on Facebook"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex size-10 items-center justify-center rounded-xl border border-border bg-background text-ink transition-all hover:-translate-y-1 hover:text-brand"
->
-  <Facebook className="size-4" />
-</a>
-                  <a
-  href={"https://" + "instagram.com"}
-  aria-label="AltravoStudio on Instagram"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex size-10 items-center justify-center rounded-xl border border-border bg-background text-ink transition-all hover:-translate-y-1 hover:text-brand"
->
-  <Instagram className="size-4" />
-</a>
-                </div>
+  <a
+                    href="https://www.facebook.com/profile.php?id=61592841487454"
+    aria-label="AltravoStudio on Facebook"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex size-10 items-center justify-center rounded-xl border border-border bg-background text-ink transition-all hover:-translate-y-1 hover:text-brand"
+  >
+    <Facebook className="size-4" />
+  </a>
+
+  <a
+                    href="https://www.instagram.com/"
+    aria-label="AltravoStudio on Instagram"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex size-10 items-center justify-center rounded-xl border border-border bg-background text-ink transition-all hover:-translate-y-1 hover:text-brand"
+  >
+    <Instagram className="size-4" />
+  </a>
+</div>
               </div>
               <div className="overflow-hidden rounded-3xl border border-border shadow-soft">
                 <iframe
