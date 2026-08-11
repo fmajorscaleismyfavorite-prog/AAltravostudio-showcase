@@ -49,13 +49,7 @@ export function SectionHeading({
   align?: "center" | "left";
 }) {
   return (
-    <div
-      className={
-        align === "center"
-          ? "mx-auto max-w-2xl text-center"
-          : "max-w-2xl text-left"
-      }
-    >
+    <div className={align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-2xl text-left"}>
       <Reveal>
         <span className="inline-flex items-center gap-2 rounded-full border border-border bg-muted px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand">
           {eyebrow}

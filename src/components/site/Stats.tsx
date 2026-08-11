@@ -30,10 +30,7 @@ const stats = [
 
 export function Stats() {
   return (
-    <section
-      aria-label="AltravoStudio highlights"
-      className="bg-background py-16 sm:py-20"
-    >
+    <section aria-label="AltravoStudio highlights" className="bg-background py-16 sm:py-20">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-5 px-5 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
         {stats.map((stat, index) => {
           const Icon = stat.icon;
@@ -60,7 +57,6 @@ export function Stats() {
               className="group h-full"
             >
               <div className="relative flex h-full min-h-[260px] flex-col items-center justify-center overflow-hidden rounded-3xl border border-border bg-mist p-8 text-center shadow-soft transition-all duration-300 hover:border-brand/40 hover:shadow-lift">
-                
                 {/* Glow */}
                 <div className="pointer-events-none absolute -right-16 -top-16 size-40 rounded-full bg-brand/10 blur-3xl transition-all duration-500 group-hover:bg-brand/20" />
 

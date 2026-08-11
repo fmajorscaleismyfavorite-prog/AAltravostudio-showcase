@@ -3,18 +3,45 @@ import { motion } from "motion/react";
 import { Reveal, SectionHeading } from "./Reveal";
 
 const benefits = [
-  { icon: ShieldCheck, title: "Build Trust", copy: "A polished website tells customers you are established, professional, and safe to buy from." },
-  { icon: Search, title: "Be Found on Google", copy: "Show up when people nearby search for exactly what your business offers." },
-  { icon: Clock, title: "Accept Inquiries 24/7", copy: "Your site answers questions and captures leads while you sleep or serve customers." },
-  { icon: LayoutGrid, title: "Showcase Services", copy: "Present your menu, treatments, packages, or portfolio the way they deserve to be seen." },
-  { icon: TrendingUp, title: "Increase Sales", copy: "Clear calls to action turn casual visitors into booked appointments and paying customers." },
-  { icon: Palette, title: "Professional Branding", copy: "Consistent colors, typography, and photography make your business memorable." },
+  {
+    icon: ShieldCheck,
+    title: "Build Trust",
+    copy: "A polished website tells customers you are established, professional, and safe to buy from.",
+  },
+  {
+    icon: Search,
+    title: "Be Found on Google",
+    copy: "Show up when people nearby search for exactly what your business offers.",
+  },
+  {
+    icon: Clock,
+    title: "Accept Inquiries 24/7",
+    copy: "Your site answers questions and captures leads while you sleep or serve customers.",
+  },
+  {
+    icon: LayoutGrid,
+    title: "Showcase Services",
+    copy: "Present your menu, treatments, packages, or portfolio the way they deserve to be seen.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Increase Sales",
+    copy: "Clear calls to action turn casual visitors into booked appointments and paying customers.",
+  },
+  {
+    icon: Palette,
+    title: "Professional Branding",
+    copy: "Consistent colors, typography, and photography make your business memorable.",
+  },
 ];
 
 export function WhyWebsites() {
   return (
     <section id="why-websites" className="section-pad relative overflow-hidden bg-mist">
-      <div aria-hidden className="pointer-events-none absolute -right-40 top-20 size-[28rem] rounded-full bg-accent/20 blur-3xl animate-blob" />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-40 top-20 size-[28rem] rounded-full bg-accent/20 blur-3xl animate-blob"
+      />
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Why websites matter"

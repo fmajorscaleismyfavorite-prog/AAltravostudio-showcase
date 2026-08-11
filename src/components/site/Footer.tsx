@@ -36,59 +36,57 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           {/* Brand */}
-<div>
-  <div className="flex items-center gap-3">
-    <img
-  src={logo}
-  alt="AltravoStudio logo"
-  suppressHydrationWarning
-  className="h-10 w-auto object-contain"
-/>
+          <div>
+            <div className="flex items-center gap-3">
+              <img
+                src={logo}
+                alt="AltravoStudio logo"
+                suppressHydrationWarning
+                className="h-10 w-auto object-contain"
+              />
 
-    <span className="text-xl font-bold text-ink">
-      Altravo<span className="text-brand">Studio</span>
-    </span>
-  </div>
+              <span className="text-xl font-bold text-ink">
+                Altravo<span className="text-brand">Studio</span>
+              </span>
+            </div>
 
-  <p className="mt-4 text-sm leading-6 text-muted-foreground">
-    We help local businesses attract more customers with beautiful,
-    fast, high-converting websites that work around the clock.
-  </p>
+            <p className="mt-4 text-sm leading-6 text-muted-foreground">
+              We help local businesses attract more customers with beautiful, fast, high-converting
+              websites that work around the clock.
+            </p>
 
-  {/* Social Icons */}
-  <div className="mt-6 flex items-center gap-4">
-    <a
-      href="#"
-      aria-label="Facebook"
-      className="text-muted-foreground transition-colors hover:text-brand"
-    >
-      <Facebook className="h-5 w-5" />
-    </a>
+            {/* Social Icons */}
+            <div className="mt-6 flex items-center gap-4">
+              <a
+                href="#"
+                aria-label="Facebook"
+                className="text-muted-foreground transition-colors hover:text-brand"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
 
-    <a
-      href="#"
-      aria-label="Instagram"
-      className="text-muted-foreground transition-colors hover:text-brand"
-    >
-      <Instagram className="h-5 w-5" />
-    </a>
+              <a
+                href="#"
+                aria-label="Instagram"
+                className="text-muted-foreground transition-colors hover:text-brand"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
 
-    <a
-      href="#"
-      aria-label="Email"
-      className="text-muted-foreground transition-colors hover:text-brand"
-    >
-      <Mail className="h-5 w-5" />
-    </a>
-  </div>
-</div>
+              <a
+                href="#"
+                aria-label="Email"
+                className="text-muted-foreground transition-colors hover:text-brand"
+              >
+                <Mail className="h-5 w-5" />
+              </a>
+            </div>
+          </div>
 
           {/* Navigation */}
           {groups.map((group) => (
             <nav key={group.title} aria-label={group.title}>
-              <h3 className="text-sm font-bold text-ink">
-                {group.title}
-              </h3>
+              <h3 className="text-sm font-bold text-ink">{group.title}</h3>
 
               <ul className="mt-4 space-y-3">
                 {group.links.map((link) => (
@@ -107,13 +105,9 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row">
-          <p>
-            © {new Date().getFullYear()} AltravoStudio. All rights reserved.
-          </p>
+          <p>© {new Date().getFullYear()} AltravoStudio. All rights reserved.</p>
 
-          <p>
-            Websites that help local businesses grow.
-          </p>
+          <p>Websites that help local businesses grow.</p>
         </div>
       </div>
     </footer>

@@ -1,23 +1,81 @@
 import { motion } from "motion/react";
 import {
-  Globe, Rocket, UtensilsCrossed, Scissors, Stethoscope, Images,
-  CalendarClock, RefreshCw, Wrench, Search, MapPin, Gauge,
+  Globe,
+  Rocket,
+  UtensilsCrossed,
+  Scissors,
+  Stethoscope,
+  Images,
+  CalendarClock,
+  RefreshCw,
+  Wrench,
+  Search,
+  MapPin,
+  Gauge,
 } from "lucide-react";
 import { Reveal, SectionHeading } from "./Reveal";
 
 const services = [
-  { icon: Globe, title: "Business Website", copy: "A complete online home with services, proof, and contact paths that convert." },
-  { icon: Rocket, title: "Landing Page", copy: "One focused page built to turn ad clicks and promos into real inquiries." },
-  { icon: UtensilsCrossed, title: "Restaurant Website", copy: "Menus, photos, reservations, and directions that fill more tables." },
-  { icon: Scissors, title: "Barbershop Website", copy: "Style galleries, pricing, and online booking your regulars will actually use." },
-  { icon: Stethoscope, title: "Clinic Website", copy: "Reassuring, accessible design with appointment requests and clear services." },
-  { icon: Images, title: "Portfolio Website", copy: "Let your finished work do the selling with a gallery that loads instantly." },
-  { icon: CalendarClock, title: "Booking Website", copy: "Take appointments, deposits, and enquiries without the back-and-forth." },
-  { icon: RefreshCw, title: "Website Redesign", copy: "Modernise an outdated site and recover the customers it's been losing." },
-  { icon: Wrench, title: "Website Maintenance", copy: "Updates, backups, and monitoring so your site stays fast and secure." },
-  { icon: Search, title: "SEO Optimization", copy: "Local keywords, structure, and content so nearby customers find you first." },
-  { icon: MapPin, title: "Google Business Profile", copy: "Set up and optimised so you appear on Maps with photos and reviews." },
-  { icon: Gauge, title: "Performance Optimization", copy: "Sub-second loading — because every extra second costs you customers." },
+  {
+    icon: Globe,
+    title: "Business Website",
+    copy: "A complete online home with services, proof, and contact paths that convert.",
+  },
+  {
+    icon: Rocket,
+    title: "Landing Page",
+    copy: "One focused page built to turn ad clicks and promos into real inquiries.",
+  },
+  {
+    icon: UtensilsCrossed,
+    title: "Restaurant Website",
+    copy: "Menus, photos, reservations, and directions that fill more tables.",
+  },
+  {
+    icon: Scissors,
+    title: "Barbershop Website",
+    copy: "Style galleries, pricing, and online booking your regulars will actually use.",
+  },
+  {
+    icon: Stethoscope,
+    title: "Clinic Website",
+    copy: "Reassuring, accessible design with appointment requests and clear services.",
+  },
+  {
+    icon: Images,
+    title: "Portfolio Website",
+    copy: "Let your finished work do the selling with a gallery that loads instantly.",
+  },
+  {
+    icon: CalendarClock,
+    title: "Booking Website",
+    copy: "Take appointments, deposits, and enquiries without the back-and-forth.",
+  },
+  {
+    icon: RefreshCw,
+    title: "Website Redesign",
+    copy: "Modernise an outdated site and recover the customers it's been losing.",
+  },
+  {
+    icon: Wrench,
+    title: "Website Maintenance",
+    copy: "Updates, backups, and monitoring so your site stays fast and secure.",
+  },
+  {
+    icon: Search,
+    title: "SEO Optimization",
+    copy: "Local keywords, structure, and content so nearby customers find you first.",
+  },
+  {
+    icon: MapPin,
+    title: "Google Business Profile",
+    copy: "Set up and optimised so you appear on Maps with photos and reviews.",
+  },
+  {
+    icon: Gauge,
+    title: "Performance Optimization",
+    copy: "Sub-second loading — because every extra second costs you customers.",
+  },
 ];
 
 export function Services() {
@@ -46,7 +104,9 @@ export function Services() {
                   <s.icon className="size-5" />
                 </span>
                 <h3 className="relative mt-5 text-lg font-bold text-ink">{s.title}</h3>
-                <p className="relative mt-2 text-sm leading-relaxed text-muted-foreground">{s.copy}</p>
+                <p className="relative mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {s.copy}
+                </p>
               </motion.article>
             </Reveal>
           ))}

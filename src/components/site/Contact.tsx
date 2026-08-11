@@ -19,15 +19,31 @@ const schema = z.object({
 
 const fields = [
   { name: "name", label: "Name", type: "text", placeholder: "Juan Dela Cruz", required: true },
-  { name: "business", label: "Business Name", type: "text", placeholder: "Sunrise Café", required: false },
+  {
+    name: "business",
+    label: "Business Name",
+    type: "text",
+    placeholder: "Sunrise Café",
+    required: false,
+  },
   { name: "email", label: "Email", type: "email", placeholder: "you@business.com", required: true },
   { name: "phone", label: "Phone", type: "tel", placeholder: "+63 992 058 6534", required: false },
 ] as const;
 
 const details = [
-  { icon: Mail, label: "Email", value: "altravostudio@gmail.com", href: "mailto:altravostudio@gmail.com" },
+  {
+    icon: Mail,
+    label: "Email",
+    value: "altravostudio@gmail.com",
+    href: "mailto:altravostudio@gmail.com",
+  },
   { icon: Phone, label: "Phone", value: "+63 992 058 6534", href: "tel:+63992 058 6534" },
-  { icon: MapPin, label: "Location", value: "Dasmariñas Cavite, Philippines — serving clients worldwide", href: undefined },
+  {
+    icon: MapPin,
+    label: "Location",
+    value: "Dasmariñas Cavite, Philippines — serving clients worldwide",
+    href: undefined,
+  },
 ];
 
 export function Contact() {
@@ -62,7 +78,10 @@ export function Contact() {
 
   return (
     <section id="contact" className="section-pad relative overflow-hidden bg-background">
-      <div aria-hidden className="pointer-events-none absolute -left-40 top-40 size-[26rem] rounded-full bg-primary/10 blur-3xl animate-blob" />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -left-40 top-40 size-[26rem] rounded-full bg-primary/10 blur-3xl animate-blob"
+      />
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Contact"
@@ -145,7 +164,10 @@ export function Contact() {
                           {d.label}
                         </span>
                         {d.href ? (
-                          <a href={d.href} className="text-sm font-medium text-ink hover:text-brand">
+                          <a
+                            href={d.href}
+                            className="text-sm font-medium text-ink hover:text-brand"
+                          >
                             {d.value}
                           </a>
                         ) : (
@@ -157,14 +179,14 @@ export function Contact() {
                 </ul>
                 <div className="mt-6 flex gap-3">
                   <a
-  href="https://www.facebook.com/profile.php?id=61592841487454"
-  aria-label="AltravoStudio on Facebook"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex size-10 items-center justify-center rounded-xl border border-border bg-background text-ink transition-all hover:-translate-y-1 hover:text-brand"
->
-  <Facebook className="size-4" />
-</a>
+                    href="https://www.facebook.com/profile.php?id=61592841487454"
+                    aria-label="AltravoStudio on Facebook"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex size-10 items-center justify-center rounded-xl border border-border bg-background text-ink transition-all hover:-translate-y-1 hover:text-brand"
+                  >
+                    <Facebook className="size-4" />
+                  </a>
                   <a
                     href="https://instagram.com"
                     aria-label="AltravoStudio on Instagram"
@@ -174,22 +196,22 @@ export function Contact() {
                   </a>
                 </div>
               </div>
-<div className="overflow-hidden rounded-3xl border border-border shadow-soft">
-  <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123714.82561776626!2d120.88593306544223!3d14.306302012242842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d5b87c111e25%3A0xab8cb698f840321f!2sDasmari%C3%B1as%2C%20Cavite!5e0!3m2!1sen!2sph!4v1786095180687!5m2!1sen!2sph"
-  width="100%"
-  height="350"
-  style={{ border: 0 }}
-  loading="lazy"
-  referrerPolicy="strict-origin-when-cross-origin"
-  allowFullScreen
-  title="AltravoStudio Location"
-/>
-          </div>
+              <div className="overflow-hidden rounded-3xl border border-border shadow-soft">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123714.82561776626!2d120.88593306544223!3d14.306302012242842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d5b87c111e25%3A0xab8cb698f840321f!2sDasmari%C3%B1as%2C%20Cavite!5e0!3m2!1sen!2sph!4v1786095180687!5m2!1sen!2sph"
+                  width="100%"
+                  height="350"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  title="AltravoStudio Location"
+                />
+              </div>
+            </div>
+          </Reveal>
         </div>
-      </Reveal>
-    </div>
-  </div>
-</section>
-);
+      </div>
+    </section>
+  );
 }

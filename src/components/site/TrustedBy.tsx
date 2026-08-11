@@ -23,9 +23,8 @@ export function TrustedBy() {
           </h2>
 
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-            We create modern online experiences for local businesses across
-            different industries — helping them look professional, get found
-            online, and turn visitors into customers.
+            We create modern online experiences for local businesses across different industries —
+            helping them look professional, get found online, and turn visitors into customers.
           </p>
         </div>
 

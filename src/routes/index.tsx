@@ -42,7 +42,11 @@ export const Route = createFileRoute("/")({
           areaServed: "Worldwide",
           email: "altravostudio.com",
           telephone: "992 058 6534",
-          address: { "@type": "PostalAddress", addressLocality: "Metro Manila", addressCountry: "PH" },
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Metro Manila",
+            addressCountry: "PH",
+          },
           aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "100" },
         }),
       },

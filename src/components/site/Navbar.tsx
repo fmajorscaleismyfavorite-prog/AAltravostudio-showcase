@@ -38,9 +38,7 @@ export function Navbar() {
     <header
       className={
         "fixed inset-x-0 top-0 z-50 transition-all duration-500 " +
-        (scrolled
-          ? "glass shadow-soft"
-          : "border-b border-transparent bg-transparent")
+        (scrolled ? "glass shadow-soft" : "border-b border-transparent bg-transparent")
       }
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
@@ -51,11 +49,11 @@ export function Navbar() {
           className="flex items-center gap-2 text-xl font-extrabold tracking-tight text-ink"
         >
           <img
-  src={logo}
-  alt="AltravoStudio"
-  suppressHydrationWarning
-  className="h-9 w-auto scale-180 object-contain"
-/>
+            src={logo}
+            alt="AltravoStudio"
+            suppressHydrationWarning
+            className="h-9 w-auto scale-180 object-contain"
+          />
 
           <span>
             Altravo<span className="text-brand">Studio</span>
@@ -94,11 +92,7 @@ export function Navbar() {
             onClick={() => setOpen((value) => !value)}
             className="flex size-10 items-center justify-center rounded-xl border border-border bg-background text-ink xl:hidden"
           >
-            {open ? (
-              <X className="size-5" />
-            ) : (
-              <Menu className="size-5" />
-            )}
+            {open ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
         </div>
       </nav>

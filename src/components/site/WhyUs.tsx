@@ -26,7 +26,10 @@ const modern = [
 
 export function WhyUs() {
   return (
-    <section id="why-us" className="section-pad relative overflow-hidden bg-gradient-ink text-ink-foreground">
+    <section
+      id="why-us"
+      className="section-pad relative overflow-hidden bg-gradient-ink text-ink-foreground"
+    >
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="absolute -left-20 top-1/4 size-[26rem] rounded-full bg-accent/20 blur-3xl animate-blob" />
         <div className="absolute -right-16 bottom-0 size-[24rem] rounded-full bg-primary/40 blur-3xl animate-blob [animation-delay:-8s]" />
@@ -75,7 +78,10 @@ export function WhyUs() {
               transition={{ type: "spring", stiffness: 240, damping: 20 }}
               className="relative h-full overflow-hidden rounded-3xl border border-accent/30 bg-white/10 p-8 shadow-glow backdrop-blur-xl"
             >
-              <span aria-hidden className="absolute -right-16 -top-16 size-52 rounded-full bg-accent/30 blur-3xl" />
+              <span
+                aria-hidden
+                className="absolute -right-16 -top-16 size-52 rounded-full bg-accent/30 blur-3xl"
+              />
               <div className="relative flex items-center gap-3">
                 <h3 className="text-xl font-bold text-white">Modern Digital Approach</h3>
                 <span className="rounded-full bg-gradient-brand px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-brand-foreground">

@@ -151,12 +151,12 @@ export function Portfolio() {
 
                     <div className="aspect-[16/10] overflow-hidden bg-white">
                       <img
-  src={p.image}
-  alt={`${p.title} ${p.category} website design`}
-  loading="lazy"
-  suppressHydrationWarning
-  className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
-/>
+                        src={p.image}
+                        alt={`${p.title} ${p.category} website design`}
+                        loading="lazy"
+                        suppressHydrationWarning
+                        className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                      />
                     </div>
                   </div>
 
@@ -176,9 +176,7 @@ export function Portfolio() {
 
                 {/* PROJECT INFO */}
                 <div className="p-6">
-                  <h3 className="text-lg font-bold text-ink">
-                    {p.title}
-                  </h3>
+                  <h3 className="text-lg font-bold text-ink">{p.title}</h3>
 
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                     {p.description}
@@ -200,21 +198,18 @@ export function Portfolio() {
       </div>
 
       {/* PROJECT MODAL */}
-      <Dialog
-        open={!!active}
-        onOpenChange={(open) => !open && setActive(null)}
-      >
+      <Dialog open={!!active} onOpenChange={(open) => !open && setActive(null)}>
         <DialogContent className="max-h-[90vh] gap-0 overflow-y-auto rounded-3xl p-0 sm:max-w-4xl">
           {active ? (
             <>
               {/* Large Preview */}
               <img
-  src={active.image}
-  alt={`${active.title} website preview`}
-  loading="lazy"
-  suppressHydrationWarning
-  className="h-auto w-full object-cover object-top"
-/>
+                src={active.image}
+                alt={`${active.title} website preview`}
+                loading="lazy"
+                suppressHydrationWarning
+                className="h-auto w-full object-cover object-top"
+              />
 
               {/* Project Details */}
               <div className="p-7">
@@ -234,10 +229,7 @@ export function Portfolio() {
 
                 <ul className="mt-6 grid gap-3">
                   {active.results.map((result) => (
-                    <li
-                      key={result}
-                      className="flex items-start gap-3 text-sm text-ink"
-                    >
+                    <li key={result} className="flex items-start gap-3 text-sm text-ink">
                       <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-gradient-brand text-brand-foreground">
                         <Check className="size-3" />
                       </span>

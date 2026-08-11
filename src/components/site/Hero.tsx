@@ -4,10 +4,34 @@ import { ArrowRight, Play, TrendingUp, MessageSquare, CalendarCheck, Star } from
 import heroMockup from "@/assets/hero-mockup.jpg";
 
 const floaters = [
-  { icon: MessageSquare, label: "New Inquiry", value: "Maria booked a call", cls: "-left-4 top-10 sm:-left-10", delay: 0 },
-  { icon: TrendingUp, label: "Website Visitors", value: "+248% this month", cls: "-right-2 top-32 sm:-right-8", delay: 0.6 },
-  { icon: CalendarCheck, label: "Bookings", value: "37 new this week", cls: "-left-2 bottom-24 sm:-left-12", delay: 1.2 },
-  { icon: Star, label: "Customer Reviews", value: "4.9 average rating", cls: "-right-2 bottom-8 sm:-right-6", delay: 1.8 },
+  {
+    icon: MessageSquare,
+    label: "New Inquiry",
+    value: "Maria booked a call",
+    cls: "-left-4 top-10 sm:-left-10",
+    delay: 0,
+  },
+  {
+    icon: TrendingUp,
+    label: "Website Visitors",
+    value: "+248% this month",
+    cls: "-right-2 top-32 sm:-right-8",
+    delay: 0.6,
+  },
+  {
+    icon: CalendarCheck,
+    label: "Bookings",
+    value: "37 new this week",
+    cls: "-left-2 bottom-24 sm:-left-12",
+    delay: 1.2,
+  },
+  {
+    icon: Star,
+    label: "Customer Reviews",
+    value: "4.9 average rating",
+    cls: "-right-2 bottom-8 sm:-right-6",
+    delay: 1.8,
+  },
 ];
 
 export function Hero() {
@@ -17,14 +41,21 @@ export function Hero() {
   const fade = useTransform(scrollYProgress, [0, 1], [1, 0.2]);
 
   return (
-    <section id="home" ref={ref} className="relative overflow-hidden bg-mist pt-32 pb-20 lg:pt-40 lg:pb-28">
+    <section
+      id="home"
+      ref={ref}
+      className="relative overflow-hidden bg-mist pt-32 pb-20 lg:pt-40 lg:pb-28"
+    >
       <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -left-32 -top-24 size-[38rem] rounded-full bg-primary/25 blur-3xl animate-blob" />
         <div className="absolute -right-24 top-10 size-[32rem] rounded-full bg-accent/30 blur-3xl animate-blob [animation-delay:-6s]" />
         <div className="absolute bottom-[-12rem] left-1/3 size-[30rem] rounded-full bg-primary/15 blur-3xl animate-blob [animation-delay:-11s]" />
       </div>
 
-      <motion.div style={{ opacity: fade }} className="relative mx-auto grid max-w-7xl items-center gap-16 px-5 lg:grid-cols-[1.05fr_1fr] lg:px-8">
+      <motion.div
+        style={{ opacity: fade }}
+        className="relative mx-auto grid max-w-7xl items-center gap-16 px-5 lg:grid-cols-[1.05fr_1fr] lg:px-8"
+      >
         <div>
           <motion.span
             initial={{ opacity: 0, y: 16 }}
@@ -84,9 +115,18 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-muted-foreground"
           >
-            <span className="flex items-center gap-2"><span className="size-1.5 rounded-full bg-brand" />7–14 Day Typical Launch</span>
-            <span className="flex items-center gap-2"><span className="size-1.5 rounded-full bg-brand" />Mobile-first &amp; SEO-ready</span>
-            <span className="flex items-center gap-2"><span className="size-1.5 rounded-full bg-brand" />Free consultation</span>
+            <span className="flex items-center gap-2">
+              <span className="size-1.5 rounded-full bg-brand" />
+              7–14 Day Typical Launch
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="size-1.5 rounded-full bg-brand" />
+              Mobile-first &amp; SEO-ready
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="size-1.5 rounded-full bg-brand" />
+              Free consultation
+            </span>
           </motion.div>
         </div>
 

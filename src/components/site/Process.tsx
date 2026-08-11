@@ -1,12 +1,5 @@
 import { motion } from "motion/react";
-import {
-  Search,
-  ClipboardList,
-  Palette,
-  Code2,
-  Rocket,
-  Headphones,
-} from "lucide-react";
+import { Search, ClipboardList, Palette, Code2, Rocket, Headphones } from "lucide-react";
 import { SectionHeading } from "./Reveal";
 
 const steps = [
@@ -20,22 +13,19 @@ const steps = [
   {
     number: "02",
     title: "Planning",
-    description:
-      "We decide what pages, content, features, and calls-to-action your website needs.",
+    description: "We decide what pages, content, features, and calls-to-action your website needs.",
     icon: ClipboardList,
   },
   {
     number: "03",
     title: "Design",
-    description:
-      "We create a modern, mobile-first design tailored to your business and brand.",
+    description: "We create a modern, mobile-first design tailored to your business and brand.",
     icon: Palette,
   },
   {
     number: "04",
     title: "Development",
-    description:
-      "We turn the approved design into a fast, responsive, and SEO-ready website.",
+    description: "We turn the approved design into a fast, responsive, and SEO-ready website.",
     icon: Code2,
   },
   {
@@ -124,9 +114,7 @@ export function Process() {
                         Step {step.number}
                       </p>
 
-                      <h3 className="mt-2 text-xl font-bold text-ink sm:text-2xl">
-                        {step.title}
-                      </h3>
+                      <h3 className="mt-2 text-xl font-bold text-ink sm:text-2xl">{step.title}</h3>
 
                       <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
                         {step.description}
@@ -151,9 +139,7 @@ export function Process() {
           className="mt-12 flex flex-col items-center justify-between gap-5 rounded-3xl border border-border bg-mist p-7 text-center shadow-soft sm:flex-row sm:text-left sm:p-8"
         >
           <div>
-            <p className="text-lg font-bold text-ink">
-              Ready to get started?
-            </p>
+            <p className="text-lg font-bold text-ink">Ready to get started?</p>
 
             <p className="mt-1 text-sm text-muted-foreground">
               Tell us about your business and we'll help you figure out the next step.

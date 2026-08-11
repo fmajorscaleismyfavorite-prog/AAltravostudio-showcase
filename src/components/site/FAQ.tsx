@@ -58,7 +58,7 @@ export function FAQ() {
                   className="rounded-2xl border border-border bg-mist px-6 shadow-soft transition-colors data-[state=open]:border-brand/40"
                 >
                   <AccordionTrigger className="text-left text-base font-semibold text-ink hover:no-underline sm:text-lg">
-                   {f.q}
+                    {f.q}
                   </AccordionTrigger>
 
                   <AccordionContent className="pb-5 text-sm leading-relaxed text-muted-foreground">
@@ -71,9 +71,7 @@ export function FAQ() {
             {/* Ask Us CTA */}
             <div className="mt-8 flex flex-col items-center justify-between gap-5 rounded-3xl border border-border bg-mist p-6 text-center shadow-soft sm:flex-row sm:text-left">
               <div>
-                <p className="text-lg font-bold text-ink">
-                  Still have a question?
-                </p>
+                <p className="text-lg font-bold text-ink">Still have a question?</p>
 
                 <p className="mt-1 text-sm text-muted-foreground">
                   Tagalog or English — just ask us. We're happy to help.

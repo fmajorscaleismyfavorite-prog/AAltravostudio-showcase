@@ -1,11 +1,5 @@
 import { motion } from "motion/react";
-import {
-  Smartphone,
-  Search,
-  Zap,
-  MessageCircle,
-  ArrowUpRight,
-} from "lucide-react";
+import { Smartphone, Search, Zap, MessageCircle, ArrowUpRight } from "lucide-react";
 import { SectionHeading } from "./Reveal";
 
 const benefits = [
@@ -86,9 +80,7 @@ export function Testimonials() {
 
                 {/* Content */}
                 <div className="relative">
-                  <h3 className="mt-6 text-lg font-bold text-ink">
-                    {benefit.title}
-                  </h3>
+                  <h3 className="mt-6 text-lg font-bold text-ink">{benefit.title}</h3>
 
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                     {benefit.description}
@@ -97,12 +89,12 @@ export function Testimonials() {
 
                 {/* Bottom accent */}
                 <a
-                   href="#services"
-                   className="mt-7 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.12em] text-brand opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100"
-                 >
+                  href="#services"
+                  className="mt-7 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.12em] text-brand opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100"
+                >
                   Built for your business
-                   <ArrowUpRight className="size-3.5" />
-                 </a>
+                  <ArrowUpRight className="size-3.5" />
+                </a>
               </motion.article>
             );
           })}
@@ -117,9 +109,7 @@ export function Testimonials() {
           className="mt-10 flex flex-col items-center justify-between gap-5 rounded-3xl border border-border bg-mist p-7 sm:flex-row sm:p-8"
         >
           <div>
-            <p className="text-lg font-bold text-ink">
-              Ready to build your online presence?
-            </p>
+            <p className="text-lg font-bold text-ink">Ready to build your online presence?</p>
             <p className="mt-1 text-sm text-muted-foreground">
               Let's create a website that works for your business.
             </p>
