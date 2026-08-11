@@ -183,17 +183,20 @@ export function Contact() {
   aria-label="AltravoStudio on Facebook"
   target="_blank"
   rel="noopener noreferrer"
-  className="relative z-50 flex size-10 cursor-pointer items-center justify-center rounded-xl border border-border bg-background text-ink transition-all hover:-translate-y-1 hover:text-brand"
+  className="flex size-10 items-center justify-center rounded-xl border border-border bg-background text-ink transition-all hover:-translate-y-1 hover:text-brand"
 >
-  <Facebook className="size-4 pointer-events-none" />
+  <Facebook className="size-4" />
 </a>
-                  <a
-                    href="https://instagram.com"
-                    aria-label="AltravoStudio on Instagram"
-                    className="flex size-10 items-center justify-center rounded-xl border border-border bg-background text-ink transition-all hover:-translate-y-1 hover:text-brand"
-                  >
-                    <Instagram className="size-4" />
-                  </a>
+
+<a
+  href="https://instagram.com"
+  aria-label="AltravoStudio on Instagram"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex size-10 items-center justify-center rounded-xl border border-border bg-background text-ink transition-all hover:-translate-y-1 hover:text-brand"
+>
+  <Instagram className="size-4" />
+</a>
                 </div>
               </div>
               <div className="overflow-hidden rounded-3xl border border-border shadow-soft">
