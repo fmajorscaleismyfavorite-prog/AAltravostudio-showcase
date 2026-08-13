@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
 import { motion } from "motion/react";
@@ -41,7 +41,7 @@ const details = [
   {
     icon: MapPin,
     label: "Location",
-    value: "DasmariÃ±as Cavite, Philippines â€” serving clients worldwide",
+    value: "Dasmariñas Cavite, Philippines — serving clients worldwide",
     href: undefined,
   },
 ];
