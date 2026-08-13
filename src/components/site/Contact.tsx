@@ -23,7 +23,7 @@ const fields = [
     name: "business",
     label: "Business Name",
     type: "text",
-    placeholder: "Sunrise CafÃ©",
+    placeholder: "Sunrise Café",
     required: false,
   },
   { name: "email", label: "Email", type: "email", placeholder: "you@business.com", required: true },
@@ -86,7 +86,7 @@ export function Contact() {
         <SectionHeading
           eyebrow="Contact"
           title={<>Tell us about your business</>}
-          description="Share a few details and we'll come back with honest advice, a timeline, and a fixed quote â€” free of charge."
+          description="Tell us about your business and what you need. Get a free consultation and discover how AltravoStudio can help you build a stronger online presence."
         />
 
         <div className="mt-14 grid gap-6 lg:grid-cols-[1.15fr_1fr]">
